@@ -1,0 +1,38 @@
+syntax="proto3";
+
+package fixbug;
+
+option cc_generic_services=true;
+
+message ResultCode{
+    int32 errcode=1;
+    bytes errmsg=2;
+}
+
+// 参数类型
+message LoginRequest{
+    bytes name=1;
+    bytes pwd=2;
+}
+
+// 返回值类型
+message LoginReponse{
+    ResultCode result=1;
+    bool success=2;
+}
+
+
+message GetFriendsListRequest{
+    uint32 userid=1;
+}
+
+message GetFriendsListResponse{
+    ResultCode result=1;
+    repeated bytes friends=2;
+}
+
+// 好友模块
+service FriendServiceRpc{
+    // 这里是函数描述
+    rpc GetFriendsList(GetFriendsListRequest) returns(GetFriendsListResponse);
+}

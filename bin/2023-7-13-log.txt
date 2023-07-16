@@ -1,0 +1,10 @@
+1:12:19 => first log message!
+1:12:19 => /home/lsl/Desktop/code/Project/RPC/MyRPC/example/callee/friendservice.cc:main:41
+6:9:32 => [error]first log message!
+6:9:32 => [info]/home/lsl/Desktop/code/Project/RPC/MyRPC/example/callee/friendservice.cc:main:41
+6:9:32 => [info]service_name:FriendServiceRpc
+6:9:32 => [info]method_name:GetFriendsList
+6:26:19 => [error]first log message!
+6:26:19 => [info]/home/lsl/Desktop/code/Project/RPC/MyRPC/example/callee/friendservice.cc:main:41
+6:26:19 => [info]service_name:FriendServiceRpc
+6:26:19 => [info]method_name:GetFriendsList

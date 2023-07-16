@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcconfig.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcconfig.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcprovider.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcchannel.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcchannel.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpccontroller.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpccontroller.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/logger.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/logger.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/logger.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/src",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/mprpc.dir/zookeeperutil.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/example/callee",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/example/callee/friendservice.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/example/callee/friendservice.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/example/callee",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/example/friend.pb.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/example/friend.pb.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/example/caller",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/consumer.dir/callfriendservice.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/example/caller/callfriendservice.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/example/caller/callfriendservice.cc"
+},
+{
+  "directory": "/home/lsl/Desktop/code/Project/RPC/MyRPC/build/example/caller",
+  "command": "/usr/bin/c++   -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example  -g   -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/lsl/Desktop/code/Project/RPC/MyRPC/example/friend.pb.cc",
+  "file": "/home/lsl/Desktop/code/Project/RPC/MyRPC/example/friend.pb.cc"
+}
+]
