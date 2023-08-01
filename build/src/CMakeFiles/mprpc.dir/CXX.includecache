@@ -120,25 +120,25 @@ zookeeper/zookeeper.h
 string
 -
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/logger.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/logger.cc
 logger.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/logger.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/logger.h
 time.h
 -
 iostream
 -
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.cc
 mprpcapplication.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.h
 unistd.h
 -
 iostream
 -
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcchannel.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcchannel.cc
 mprpcchannel.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcchannel.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcchannel.h
 arpa/inet.h
 -
 errno.h
@@ -156,29 +156,29 @@ unistd.h
 string
 -
 mprpcapplication.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.h
 rpcheader.pb.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcheader.pb.h
 mprpccontroller.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpccontroller.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpccontroller.h
 zookeeperutil.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/zookeeperutil.h
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcconfig.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcconfig.cc
 mprpcconfig.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcconfig.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcconfig.h
 iostream
 -
 string
 -
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpccontroller.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpccontroller.cc
 mprpccontroller.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpccontroller.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpccontroller.h
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcheader.pb.cc
 rpcheader.pb.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcheader.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -200,21 +200,21 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcprovider.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcprovider.cc
 rpcprovider.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcprovider.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcprovider.h
 mprpcapplication.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.h
 rpcheader.pb.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/rpcheader.pb.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcheader.pb.h
 zookeeperutil.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/zookeeperutil.h
 
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.cc
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/zookeeperutil.cc
 zookeeperutil.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/zookeeperutil.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/zookeeperutil.h
 mprpcapplication.h
-/home/lsl/Desktop/code/Project/RPC/MyRPC/src/mprpcapplication.h
+/home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.h
 iostream
 -
 semaphore.h

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsl/Desktop/code/Project/RPC/MyRPC
+CMAKE_SOURCE_DIR = /home/lsl/Desktop/code/Project/RPC/mymprpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsl/Desktop/code/Project/RPC/MyRPC/build
+CMAKE_BINARY_DIR = /home/lsl/Desktop/code/Project/RPC/mymprpc/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lsl/Desktop/code/Project/RPC/MyRPC/build/CMakeFiles /home/lsl/Desktop/code/Project/RPC/MyRPC/build/example/caller/CMakeFiles/progress.marks
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsl/Desktop/code/Project/RPC/MyRPC/build/CMakeFiles 0
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lsl/Desktop/code/Project/RPC/mymprpc/build/CMakeFiles /home/lsl/Desktop/code/Project/RPC/mymprpc/build/example/caller/CMakeFiles/progress.marks
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsl/Desktop/code/Project/RPC/mymprpc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/clean
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/preinstall
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/preinstall
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 example/caller/CMakeFiles/consumer.dir/rule:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/consumer.dir/rule
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/consumer.dir/rule
 .PHONY : example/caller/CMakeFiles/consumer.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ consumer: example/caller/CMakeFiles/consumer.dir/rule
 
 # fast build rule for target.
 consumer/fast:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
 .PHONY : consumer/fast
 
 __/friend.pb.o: __/friend.pb.cc.o
@@ -131,7 +131,7 @@ __/friend.pb.o: __/friend.pb.cc.o
 
 # target to build an object file
 __/friend.pb.cc.o:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o
 .PHONY : __/friend.pb.cc.o
 
 __/friend.pb.i: __/friend.pb.cc.i
@@ -140,7 +140,7 @@ __/friend.pb.i: __/friend.pb.cc.i
 
 # target to preprocess a source file
 __/friend.pb.cc.i:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.i
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.i
 .PHONY : __/friend.pb.cc.i
 
 __/friend.pb.s: __/friend.pb.cc.s
@@ -149,7 +149,7 @@ __/friend.pb.s: __/friend.pb.cc.s
 
 # target to generate assembly for a file
 __/friend.pb.cc.s:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.s
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.s
 .PHONY : __/friend.pb.cc.s
 
 callfriendservice.o: callfriendservice.cc.o
@@ -158,7 +158,7 @@ callfriendservice.o: callfriendservice.cc.o
 
 # target to build an object file
 callfriendservice.cc.o:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.o
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.o
 .PHONY : callfriendservice.cc.o
 
 callfriendservice.i: callfriendservice.cc.i
@@ -167,7 +167,7 @@ callfriendservice.i: callfriendservice.cc.i
 
 # target to preprocess a source file
 callfriendservice.cc.i:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.i
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.i
 .PHONY : callfriendservice.cc.i
 
 callfriendservice.s: callfriendservice.cc.s
@@ -176,7 +176,7 @@ callfriendservice.s: callfriendservice.cc.s
 
 # target to generate assembly for a file
 callfriendservice.cc.s:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.s
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(MAKE) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.s
 .PHONY : callfriendservice.cc.s
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lsl/Desktop/code/Project/RPC/MyRPC/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lsl/Desktop/code/Project/RPC/mymprpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

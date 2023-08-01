@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lsl/Desktop/code/Project/RPC/MyRPC/src/include -I/home/lsl/Desktop/code/Project/RPC/MyRPC/example 
+CXX_INCLUDES = -I/home/lsl/Desktop/code/Project/RPC/mymprpc/src/include -I/home/lsl/Desktop/code/Project/RPC/mymprpc/example 
 
