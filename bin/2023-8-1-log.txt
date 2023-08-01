@@ -6,3 +6,7 @@
 11:38:17 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
 11:38:17 => [info]service_name:FriendServiceRpc
 11:38:17 => [info]method_name:GetFriendsList
+20:54:51 => [error]first log message!
+20:54:51 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+20:54:51 => [info]service_name:FriendServiceRpc
+20:54:51 => [info]method_name:GetFriendsList
