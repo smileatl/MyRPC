@@ -33,7 +33,7 @@ public:
     */
     
     // 根据request做response，再返回回去
-    virtual void Login(::google::protobuf::RpcController* controller,
+    void Login(::google::protobuf::RpcController* controller,
                        const ::fixbug::LoginRequest* request,
                        ::fixbug::LoginReponse* response,
                        ::google::protobuf::Closure* done){
