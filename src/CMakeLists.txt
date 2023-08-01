@@ -16,5 +16,8 @@ add_library(mprpc ${SRC_LIST})
 # mprpc依赖于muduo库
 # net依赖于base，需要写在前边
 # muduo生成的是一个静态库，生成的动态库去链接静态库时会出现一点问题
-target_link_libraries(mprpc muduo_net muduo_base pthread zookeeper_mt)
+# target_link_libraries(mprpc muduo_net muduo_base pthread zookeeper_mt)
+target_link_libraries(mprpc mymuduo pthread zookeeper_mt)
 # zookeeper_mt是zookeeper的多线程版本
+
+add_definitions(-std=c++17)

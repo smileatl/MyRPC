@@ -9,3 +9,4 @@ add_executable(provider ${SRC_LIST})
 # 使用mprpc框架的地方，不管网络用的是谁，这是框架内部的事
 target_link_libraries(provider mprpc protobuf)
 
+add_definitions(-std=c++17)
