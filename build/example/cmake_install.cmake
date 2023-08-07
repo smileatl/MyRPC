@@ -1,4 +1,4 @@
-# Install script for directory: /home/lsl/Desktop/code/Project/RPC/mymprpc/example
+# Install script for directory: /home/lsl/Desktop/code/project/mymprpc/mymprpc/example
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lsl/Desktop/code/Project/RPC/mymprpc/build/example/callee/cmake_install.cmake")
-  include("/home/lsl/Desktop/code/Project/RPC/mymprpc/build/example/caller/cmake_install.cmake")
+  include("/home/lsl/Desktop/code/project/mymprpc/mymprpc/build/example/callee/cmake_install.cmake")
+  include("/home/lsl/Desktop/code/project/mymprpc/mymprpc/build/example/caller/cmake_install.cmake")
 
 endif()
 
