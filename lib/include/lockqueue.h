@@ -16,19 +16,17 @@ public:
     // producer
     // 多个worker线程都会写日志queue
     void Push(const T &data){
-        // 使用了 C++ 标准库中的 std::lock_guard 类来实现互斥锁的自动上锁和解锁。
         // 加锁
         std::lock_guard<std::mutex> lock(m_mutex);
         // 放数据
         m_queue.push(data);
-        // 消费者只有一个写线程
         m_condvariable.notify_one();
     }
 
     // 一个写线程读日志queue，将其写入磁盘中的日志文件
     T Pop(){
         std::unique_lock<std::mutex> lock(m_mutex);
-        while(m_queue.empty()){ // 防止虚假唤醒
+        while(m_queue.empty()){
             // 日志队列为空，线程进入wait状态
             m_condvariable.wait(lock);
         }

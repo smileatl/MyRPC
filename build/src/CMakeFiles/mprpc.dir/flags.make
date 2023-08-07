@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=c++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lsl/Desktop/code/Project/RPC/mymprpc/src/include -I/home/lsl/Desktop/code/Project/RPC/mymprpc/example 
+CXX_INCLUDES = -I/home/lsl/Desktop/code/project/mymprpc/mymprpc/src/include -I/home/lsl/Desktop/code/project/mymprpc/mymprpc/example 
 

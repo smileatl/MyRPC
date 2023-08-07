@@ -4,13 +4,13 @@
 src/CMakeFiles/mprpc.dir/logger.cc.o
  ../src/include/lockqueue.h
  ../src/include/logger.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/logger.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/logger.cc
 src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcchannel.h
  ../src/include/mprpcconfig.h
  ../src/include/mprpccontroller.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcapplication.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/mprpcapplication.cc
 src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcchannel.h
@@ -18,16 +18,16 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
  ../src/include/mprpccontroller.h
  ../src/include/rpcheader.pb.h
  ../src/include/zookeeperutil.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcchannel.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/mprpcchannel.cc
 src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o
  ../src/include/mprpcconfig.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpcconfig.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/mprpcconfig.cc
 src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o
  ../src/include/mprpccontroller.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/mprpccontroller.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/mprpccontroller.cc
 src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o
  ../src/include/rpcheader.pb.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcheader.pb.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/rpcheader.pb.cc
 src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
  ../src/include/lockqueue.h
  ../src/include/logger.h
@@ -38,11 +38,11 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
  ../src/include/rpcheader.pb.h
  ../src/include/rpcprovider.h
  ../src/include/zookeeperutil.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/rpcprovider.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/rpcprovider.cc
 src/CMakeFiles/mprpc.dir/zookeeperutil.cc.o
  ../src/include/mprpcapplication.h
  ../src/include/mprpcchannel.h
  ../src/include/mprpcconfig.h
  ../src/include/mprpccontroller.h
  ../src/include/zookeeperutil.h
- /home/lsl/Desktop/code/Project/RPC/mymprpc/src/zookeeperutil.cc
+ /home/lsl/Desktop/code/project/mymprpc/mymprpc/src/zookeeperutil.cc
