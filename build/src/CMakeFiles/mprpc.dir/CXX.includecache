@@ -93,13 +93,13 @@ google/protobuf/service.h
 -
 memory
 -
-mymuduo/TcpServer.h
+mynetlib/TcpServer.h
 -
-mymuduo/EventLoop.h
+mynetlib/EventLoop.h
 -
-mymuduo/InetAddress.h
+mynetlib/InetAddress.h
 -
-mymuduo/TcpConnection.h
+mynetlib/TcpConnection.h
 -
 functional
 -

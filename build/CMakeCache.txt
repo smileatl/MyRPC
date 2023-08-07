@@ -213,7 +213,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 mprpc_BINARY_DIR:STATIC=/home/lsl/Desktop/code/project/mymprpc/mymprpc/build
 
 //Dependencies for the target
-mprpc_LIB_DEPENDS:STATIC=general;mymuduo;general;pthread;general;zookeeper_mt;
+mprpc_LIB_DEPENDS:STATIC=general;mynetlib;general;pthread;general;zookeeper_mt;
 
 //Value Computed by CMake
 mprpc_SOURCE_DIR:STATIC=/home/lsl/Desktop/code/project/mymprpc/mymprpc
