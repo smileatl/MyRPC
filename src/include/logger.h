@@ -44,6 +44,7 @@ private:
     LockQueue<std::string> m_lckQue;  // 日志缓冲队列
 
     Logger();
+    // 拷贝构造和移动构造
     Logger(const Logger&) = delete;
     Logger(Logger&&) = delete;
 };

@@ -16,6 +16,7 @@ Logger::Logger() {
             time_t now = time(nullptr);
             tm* nowtm = localtime(&now);
 
+            // 组织文件名
             char file_name[128];
             sprintf(file_name, "%d-%d-%d-log.txt", nowtm->tm_year + 1900,
                     nowtm->tm_mon + 1, nowtm->tm_mday);
@@ -28,16 +29,18 @@ Logger::Logger() {
             }
 
             // 这里写一个信息，就打开关闭文件一次
+            // 往文件中写日志
             std::string msg = m_lckQue.Pop();
 
             char time_buf[128] = {0};
             sprintf(time_buf, "%d:%d:%d => [%s]", nowtm->tm_hour, nowtm->tm_min,
                     nowtm->tm_sec, (m_loglevel == INFO ? "info" : "error"));
+            // 消息前面加上时间 和 日志级别,查看时便于搜索
             msg.insert(0, time_buf);
             msg.append("\n");
 
             fputs(msg.c_str(), pf);
-            fclose(pf);
+            fclose(pf); // 写一行日志就关闭文件
         }
     });
     // 设置分离线程，守护线程

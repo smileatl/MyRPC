@@ -17,7 +17,7 @@ json：文本存储， 需要有个键
 void RpcProvider::NotifyService(google::protobuf::Service* service) {
     ServiceInfo service_info;
 
-    // 获取了服务对象的描述信 息
+    // 获取了服务对象的描述信息
     // 返回值是一个常量指针
     const google::protobuf::ServiceDescriptor* pserviceDesc =
         service->GetDescriptor();
@@ -32,12 +32,13 @@ void RpcProvider::NotifyService(google::protobuf::Service* service) {
     LOG_INFO("service_name:%s", service_name.c_str());
 
     for (int i = 0; i < methodCnt; ++i) {
-        // 获取了服务对象指定下标的服务方法的描述（抽象描述）
+        // 获取了服务对象指定下标的服务方法的描述符指针（抽象描述）
         // 举例：UserService  Login，要调用功能UserService的Login方法
         //
         const google::protobuf::MethodDescriptor* pmethodDesc =
             pserviceDesc->method(i);
         std::string method_name = pmethodDesc->name();
+        // 将方法映射关系添加到对应服务对象的方法表中
         service_info.m_methodMap.insert({method_name, pmethodDesc});
 
         // std::cout << "method_name:" << method_name << std::endl;
@@ -105,7 +106,7 @@ void RpcProvider::Run() {
 
     // 启动网络服务
     server.start();
-    // 阻塞当前的线程，
+    // 阻塞当前的线程，epoll_wait
     m_eventLoop.loop();
 }
 
@@ -135,14 +136,14 @@ std::string   insert和copy方法
 void RpcProvider::OnMessage(const mymuduo::TcpConnectionPtr& conn,
                             mymuduo::Buffer* buffer,
                             mymuduo::Timestamp) {
-    // 从网络上接收的远程rpc调用请求的字符流  Login args
+    // 1.从网络上接收的远程rpc调用请求的字符流  Login args
     std::string recv_buf = buffer->retrieveAllAsString();
 
-    // 从字符流中读取前4个字节的内容
+    // 2.从字符流中读取前4个字节的内容
     uint32_t header_size = 0;
     recv_buf.copy((char*)&header_size, 4, 0);
 
-    // 根据header_size读取数据头的原始字符流 反序列化数据，得到rpc请求的详细信息
+    // 3.根据header_size读取数据头的原始字符流 反序列化数据，得到rpc请求的详细信息
     std::string rpc_header_str = recv_buf.substr(4, header_size);
     mprpc::RpcHeader rpcHeader;
     std::string service_name;
@@ -173,26 +174,26 @@ void RpcProvider::OnMessage(const mymuduo::TcpConnectionPtr& conn,
     std::cout << "args_str: " << args_str << std::endl;
     std::cout << "============================================" << std::endl;
 
-    // 获取service对象和method对象
+    // 4.获取service对象和method对象
     auto it = m_serviceMap.find(service_name);
     if (it == m_serviceMap.end()) {
         std::cout << service_name << " is not exist!" << std::endl;
         return;
     }
-
+    // <std::string, const google::protobuf::MethodDescriptor *>::iterator
     auto mit = it->second.m_methodMap.find(method_name);
     if (mit == it->second.m_methodMap.end()) {
         std::cout << service_name << ":"
                   << " is not exist!" << std::endl;
         return;
     }
-
+    // it->second 类型是ServiceInfo
     // 获取service对象，new UserService
     google::protobuf::Service* service = it->second.m_service;
     // 获取method对象  Login
     const google::protobuf::MethodDescriptor* method = mit->second;
 
-    // 生成rpc方法调用的请求request和响应response参数
+    // 5.生成rpc方法调用的请求request和响应response参数
     // 服务对象中某个服务方法的请求类型
     // 这是远程发过来的
     google::protobuf::Message* request =
@@ -205,6 +206,7 @@ void RpcProvider::OnMessage(const mymuduo::TcpConnectionPtr& conn,
     google::protobuf::Message* response =
         service->GetResponsePrototype(method).New();
 
+    // 绑定一个方法调用后的回调
     // 给下面的method方法的调用，绑定一个Closure的回调函数
     google::protobuf::Closure* done =
         google::protobuf::NewCallback<RpcProvider,
@@ -216,6 +218,7 @@ void RpcProvider::OnMessage(const mymuduo::TcpConnectionPtr& conn,
     // 在框架上用抽象的方法来进行服务的调用
     // new UserService().Login(controller, request, response, done)
     // 会往response里填响应
+    // done是执行完本地节点提供的方法后的回调，一般是把结果序列化发送回对端
     service->CallMethod(method, nullptr, request, response, done);
 }
 

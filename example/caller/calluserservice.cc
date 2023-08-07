@@ -4,7 +4,7 @@
 #include "user.pb.h"
 
 int main(int argc, char** argv) {
-    // 整个程序启动以后，想使用mprpc框架来享受rpc服务调用，一定需要先调用框架的初始化函数（只初始化一次）
+    // 1.整个程序启动以后，想使用mprpc框架来享受rpc服务调用，一定需要先调用框架的初始化函数（只初始化一次）
     MprpcApplication::Init(argc, argv);
 
     // 演示调用功能远程发布的rpc方法的Login
@@ -16,7 +16,9 @@ int main(int argc, char** argv) {
     // rpc方法的响应
     fixbug::LoginReponse response;
 
-    // 发起rpc方法的调用  同步的rpc调用过程  MprpcChannel::callMethod
+    // 发起rpc方法调用，同步的rpc调用过程
+    // 底层都是转发到RpcChannel::CallMethod方法多态调用
+    // 所以要实现一个继承自 RpcChannel 的类，并重写CallMethod方法
     stub.Login(nullptr, &request, &response,
                nullptr);  // RpcChannel->RpcChannel::callMethod
                           // 集中来做所有rpc方法调用的参数序列化和网络发送
