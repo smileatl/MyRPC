@@ -1,10 +1,10 @@
 #pragma once
 #include <google/protobuf/service.h>
 #include <memory>
-#include <mymuduo/TcpServer.h>
-#include <mymuduo/EventLoop.h>
-#include <mymuduo/InetAddress.h>
-#include <mymuduo/TcpConnection.h>
+#include <mynetlib/TcpServer.h>
+#include <mynetlib/EventLoop.h>
+#include <mynetlib/InetAddress.h>
+#include <mynetlib/TcpConnection.h>
 #include <functional>
 #include <google/protobuf/descriptor.h>
 #include <string>
@@ -30,7 +30,7 @@ private:
 
     // 组合了EventLoop
     // 在多个成员方法中都会使用
-    mymuduo::EventLoop m_eventLoop;
+    mynetlib::EventLoop m_eventLoop;
 
     // 服务类型信息
     struct ServiceInfo{
@@ -42,11 +42,11 @@ private:
 
 
     // 新的socket连接回调
-    void OnConnection(const mymuduo::TcpConnectionPtr&);
+    void OnConnection(const mynetlib::TcpConnectionPtr&);
     // 已建立连接用户的读写事件回调
-    void OnMessage(const mymuduo::TcpConnectionPtr&, mymuduo::Buffer*, mymuduo::Timestamp);
+    void OnMessage(const mynetlib::TcpConnectionPtr&, mynetlib::Buffer*, mynetlib::Timestamp);
     // Closure的回调操作，用于序列化rpc的响应和网络发送
-    void SendRpcResponse(const mymuduo::TcpConnectionPtr&, google::protobuf::Message*);
+    void SendRpcResponse(const mynetlib::TcpConnectionPtr&, google::protobuf::Message*);
 
 
 };
