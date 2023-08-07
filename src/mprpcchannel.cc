@@ -15,6 +15,7 @@
 /*
 header_size + service_name method_name args_size + args
 */
+// 客户端都是通过stub代理对象调用rpc方法，都到转发到这里调用，做rpc方法的数据序列化和网络发送
 void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                               google::protobuf::RpcController* controller,
                               const google::protobuf::Message* request,
@@ -24,7 +25,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     std::string service_name = sd->name();     // service_name
     std::string method_name = method->name();  // method_name
 
-    // 获取参数的序列化字符串长度 args_size
+    // 1.获取参数的序列化字符串长度 args_size
     int args_size = 0;
     std::string args_str;
     if (request->SerializeToString(&args_str)) {
@@ -35,7 +36,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         return;
     }
 
-    // 定义rpc的请求header
+    // 2.定义rpc的请求header
     mprpc::RpcHeader rpcHeader;
     rpcHeader.set_service_name(service_name);
     rpcHeader.set_method_name(method_name);
@@ -50,7 +51,8 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         return;
     }
 
-    // 组织待发送的rpc请求的字符串
+    // header_size | service_name | method_name| args_size | args_str(name password)
+    // 3.组织待发送的rpc请求的字符串
     std::string send_rpc_str;
     send_rpc_str.insert(
         0, std::string((char*)(&header_size), 4));  // header_size固定4字节
@@ -66,7 +68,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     std::cout << "args_str: " << args_str << std::endl;
     std::cout << "============================================" << std::endl;
 
-    // 使用tcp编程，完成rpc方法的远程调用
+    // 4.使用tcp编程，完成rpc方法的远程调用
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     if (clientfd == -1) {
         // std::cout << "create socket error! errno:" << errno << std::endl;
@@ -77,7 +79,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         return;
     }
 
-
+    // 这个函数是从usercallservice.cc的main()进入，已调用过Init函数获得配置信息
     // 读取配置文件rpcserver的信息
     // std::string ip =
     //     MprpcApplication::GeitInstance().GetConfig().Load("rpcserverip");
@@ -88,7 +90,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
     /* 从原来配置文件读取，变成从zk上发现 */
 
-    // rpc调用方向调用service_name的method_name服务，需要查询zk上该服务所在的host信息
+    // !!!rpc方法想调用service_name的method_name服务，需要查询zk上该服务所在的host信息
     ZkClient zkCli;
     zkCli.Start();
     // 所有的服务方法都在zk上注册了
@@ -156,7 +158,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         return;
     }
 
-    // 反序列化rpc调用的响应数据
+    // 5.反序列化收到的rpc调用的响应数据
     // std::string response_str(recv_buf, 0, recv_size); // bug出现问题，recv_buf中遇到\0后面的数据就存不下来了，导致反序列化失败
     // if (!response->ParseFromString(response_str))
     if (!response->ParseFromArray(recv_buf, recv_size)) {

@@ -1,0 +1,22 @@
+0:38:11 => [error]first log message!
+0:38:11 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+0:38:11 => [info]service_name:FriendServiceRpc
+0:38:11 => [info]method_name:GetFriendsList
+0:39:14 => [error]first log message!
+0:39:14 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+0:39:14 => [info]service_name:FriendServiceRpc
+0:39:14 => [info]method_name:GetFriendsList
+0:39:21 => [error]first log message!
+0:39:21 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+0:39:21 => [info]service_name:FriendServiceRpc
+0:39:21 => [info]method_name:GetFriendsList
+0:39:36 => [error]first log message!
+0:39:36 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+0:39:36 => [info]service_name:FriendServiceRpc
+0:39:36 => [info]�\a��U22:2:55 => [error]first log message!
+22:2:55 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+22:2:55 => [info]service_name:FriendServiceRpc
+22:2:55 => [info]�̦l'V22:4:23 => [error]first log message!
+22:4:23 => [error]/home/lsl/Desktop/code/Project/RPC/mymprpc/example/callee/friendservice.cc:main:41
+22:4:23 => [info]service_name:FriendServiceRpc
+22:4:23 => [info]method_name:GetFriendsList
