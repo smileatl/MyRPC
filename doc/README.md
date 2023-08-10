@@ -42,7 +42,7 @@ sudo ./autobuild.sh
 - [100.Mprpc框架使用示例](./doc/100.Mprpc框架使用示例.md)
 - [110.logger日志系统设计实现](./doc/110.logger日志系统设计实现.md)
 - [120.zookeeper简介与安装](./doc/120.zookeeper简介与安装.md)
-- [130.zookeeper C++客户端编程](./doc/130.zookeeper C++客户端编程.md)
+- [130.zookeeper_C++客户端编程](./doc/130.zookeeper_C++客户端编程.md)
 - [140.使用mprpc编写客户端（服务调用方）程序示例](./doc/140.使用mprpc编写客户端（服务调用方）程序示例.md)
 
 
